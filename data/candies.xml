@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<candies>
-    <candy id="1">
+<candies xmlns="http://www.example.com/candies">
+    <candy id="Candy_1">
         <name>Aeroflot</name>
         <energy>543</energy>
         <type>chocolate</type>
-        <ingredients>
+        <chocolate_ingredients>
             <sugar weight="1900"/>
             <powdered_milk weight="850"/>
-            <cocoa/>
-        </ingredients>
+            <cocoa>10</cocoa>
+        </chocolate_ingredients>
         <value>
             <protein>3.9</protein>
             <fat>33.7</fat>
@@ -16,15 +16,15 @@
         </value>
         <production>Spartak</production>
     </candy>
-    <candy id="2">
+    <candy id="Candy_2">
         <name>Belarusian</name>
         <energy>530</energy>
         <type>chocolate</type>
-        <ingredients>
+        <chocolate_ingredients>
             <sugar weight="2000"/>
             <powdered_milk weight="1100"/>
-            <cocoa/>
-        </ingredients>
+            <cocoa>13</cocoa>
+        </chocolate_ingredients>
         <value>
             <protein>7.1</protein>
             <fat>31.1</fat>
@@ -32,15 +32,15 @@
         </value>
         <production>Kommunarka</production>
     </candy>
-    <candy id="3">
+    <candy id="Candy_3">
         <name>Butt cream</name>
         <energy>358</energy>
         <type>creamy</type>
-        <ingredients>
+        <creamy_ingredients>
             <sugar weight="3500"/>
             <condensed_milk weight="4900"/>
-            <butter/>
-        </ingredients>
+            <butter>8</butter>
+        </creamy_ingredients>
         <value>
             <protein>2.7</protein>
             <fat>4.3</fat>
@@ -48,15 +48,15 @@
         </value>
         <production>Voznesensk food factory</production>
     </candy>
-    <candy id="4">
+    <candy id="Candy_4">
         <name>Tomboy</name>
         <energy>537</energy>
         <type>caramel</type>
-        <ingredients>
+        <caramel_ingredients>
             <sugar weight="1000"/>
-            <cocoa/>
-            <nut/>
-        </ingredients>
+            <cocoa>5</cocoa>
+            <nut>5</nut>
+        </caramel_ingredients>
         <value>
             <protein>10.3</protein>
             <fat>34.8</fat>

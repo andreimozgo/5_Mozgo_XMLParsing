@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:tns="http://www.example.com/candies"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/candies"
+        elementFormDefault="qualified">
+    <element name="candies">
+        <complexType>
+            <sequence>
+                <element name="candy"
+                         type="tns:Candy"
+                         minOccurs="1"
+                         maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Candy">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="energy" type="unsignedShort"/>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="chocolate"/>
+                        <enumeration value="creamy"/>
+                        <enumeration value="caramel"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element ref="tns:sweet"/>
+            <element name="value">
+                <complexType>
+                    <sequence>
+                        <element name="protein" type="double"/>
+                        <element name="fat" type="double"/>
+                        <element name="carbohydrate" type="double"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="production"/>
+        </sequence>
+        <attribute name="id" type="ID"/>
+    </complexType>
+
+    <complexType name="Sweet">
+        <sequence>
+            <element name="sugar">
+                <complexType>
+                    <attribute name="weight" type="unsignedShort"/>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Chocolate">
+        <complexContent>
+            <extension base="tns:Sweet">
+                <sequence>
+                    <element name="powdered_milk">
+                        <complexType>
+                            <attribute name="weight" type="unsignedShort"/>
+                        </complexType>
+                    </element>
+                    <element name="cocoa" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Creamy">
+        <complexContent>
+            <extension base="tns:Sweet">
+                <sequence>
+                    <element name="condensed_milk">
+                        <complexType>
+                            <attribute name="weight" type="unsignedShort"/>
+                        </complexType>
+                    </element>
+                    <element name="butter" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Caramel">
+        <complexContent>
+            <extension base="tns:Sweet">
+                <sequence>
+                    <element name="cocoa" type="unsignedShort"/>
+                    <element name="nut" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="sweet" type="tns:Sweet" abstract="true"></element>
+    <element name="chocolate_ingredients" type="tns:Chocolate" substitutionGroup="tns:sweet"></element>
+    <element name="creamy_ingredients" type="tns:Creamy" substitutionGroup="tns:sweet"></element>
+    <element name="caramel_ingredients" type="tns:Caramel" substitutionGroup="tns:sweet"></element>
+</schema>
