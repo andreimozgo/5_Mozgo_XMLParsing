@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<candies>
+    <candy id="1">
+        <name>Aeroflot</name>
+        <energy>543</energy>
+        <type>chocolate</type>
+        <ingredients>
+            <sugar weight="1900"/>
+            <powdered_milk weight="850"/>
+            <cocoa/>
+        </ingredients>
+        <value>
+            <protein>3.9</protein>
+            <fat>33.7</fat>
+            <carbohydrate>58</carbohydrate>
+        </value>
+        <production>Spartak</production>
+    </candy>
+    <candy id="2">
+        <name>Belarusian</name>
+        <energy>530</energy>
+        <type>chocolate</type>
+        <ingredients>
+            <sugar weight="2000"/>
+            <powdered_milk weight="1100"/>
+            <cocoa/>
+        </ingredients>
+        <value>
+            <protein>7.1</protein>
+            <fat>31.1</fat>
+            <carbohydrate>54.6</carbohydrate>
+        </value>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="3">
+        <name>Butt cream</name>
+        <energy>358</energy>
+        <type>creamy</type>
+        <ingredients>
+            <sugar weight="3500"/>
+            <condensed_milk weight="4900"/>
+            <butter/>
+        </ingredients>
+        <value>
+            <protein>2.7</protein>
+            <fat>4.3</fat>
+            <carbohydrate>82</carbohydrate>
+        </value>
+        <production>Voznesensk food factory</production>
+    </candy>
+    <candy id="4">
+        <name>Tomboy</name>
+        <energy>537</energy>
+        <type>caramel</type>
+        <ingredients>
+            <sugar weight="1000"/>
+            <cocoa/>
+            <nut/>
+        </ingredients>
+        <value>
+            <protein>10.3</protein>
+            <fat>34.8</fat>
+            <carbohydrate>45.2</carbohydrate>
+        </value>
+        <production>Kommunarka</production>
+    </candy>
+</candies>
