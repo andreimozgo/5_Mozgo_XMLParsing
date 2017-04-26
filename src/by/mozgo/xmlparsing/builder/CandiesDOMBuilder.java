@@ -14,7 +14,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.HashSet;
 
 /**
  * Created by Andrei Mozgo. 2017.
@@ -24,7 +23,7 @@ public class CandiesDOMBuilder extends CandyBaseBuilder {
     private DocumentBuilder docBuilder;
 
     public CandiesDOMBuilder() {
-        this.candies = new HashSet<>();
+        //this.candies = new ArrayList<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();

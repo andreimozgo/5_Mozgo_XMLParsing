@@ -2,20 +2,20 @@ package by.mozgo.xmlparsing.builder;
 
 import by.mozgo.xmlparsing.entity.Candy;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Andrei Mozgo. 2017.
  */
 public abstract class CandyBaseBuilder {
-    protected Set<Candy> candies;
+    protected List<Candy> candies;
 
     public CandyBaseBuilder() {
-        candies = new HashSet<>();
+        candies = new ArrayList<>();
     }
 
-    public Set<Candy> getCandies() {
+    public List<Candy> getCandies() {
         return candies;
     }
 

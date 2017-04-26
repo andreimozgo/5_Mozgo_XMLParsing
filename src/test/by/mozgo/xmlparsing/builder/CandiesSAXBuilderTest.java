@@ -6,16 +6,18 @@ import by.mozgo.xmlparsing.entity.Candy;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by Andrei Mozgo. 2017.
  */
 public class CandiesSAXBuilderTest {
+    private static final String TEST_FILE_PATH = "data/candies.xml";
+    private static final int EXPECTED_SIZE = 16;
+
     @Test
     public void testSAXParser() {
-        String fileName = "data/candies.xml";
-        Set<Candy> candies = Director.readXML(new CandiesSAXBuilder(), fileName);
-        Assert.assertEquals(16, candies.size());
+        List<Candy> candies = Director.readXML(new CandiesSAXBuilder(), TEST_FILE_PATH);
+        Assert.assertEquals(EXPECTED_SIZE, candies.size());
     }
 }

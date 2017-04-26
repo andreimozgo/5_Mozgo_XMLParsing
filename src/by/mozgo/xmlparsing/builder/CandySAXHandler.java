@@ -4,15 +4,15 @@ import by.mozgo.xmlparsing.entity.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
+import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by Andrei Mozgo. 2017.
  */
 public class CandySAXHandler extends DefaultHandler {
-    private Set<Candy> candies;
+    private List<Candy> candies;
     private Candy current = null;
     private CandySAXEnum currentEnum = null;
     private EnumSet<CandySAXEnum> withText;
@@ -24,11 +24,11 @@ public class CandySAXHandler extends DefaultHandler {
     private Value value;
 
     public CandySAXHandler() {
-        candies = new HashSet<>();
+        candies = new ArrayList<>();
         withText = EnumSet.range(CandySAXEnum.NAME, CandySAXEnum.PRODUCTION);
     }
 
-    public Set<Candy> getCandies() {
+    public List<Candy> getCandies() {
         return candies;
     }
 

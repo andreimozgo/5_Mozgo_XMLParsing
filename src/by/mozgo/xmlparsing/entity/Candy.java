@@ -45,32 +45,6 @@ public class Candy {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Candy candy = (Candy) o;
-
-        if (energy != candy.energy) return false;
-        if (!id.equals(candy.id)) return false;
-        if (!name.equals(candy.name)) return false;
-        if (type != candy.type) return false;
-        if (!ingredients.equals(candy.ingredients)) return false;
-        if (!value.equals(candy.value)) return false;
-        return production.equals(candy.production);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id.hashCode();
-        result = 31 * result + name.hashCode();
-        result = 31 * result + energy;
-        result = 31 * result + type.hashCode();
-        result = 31 * result + production.hashCode();
-        return result;
-    }
-
-    @Override
     public String toString() {
         return '\n' + "Candy{" +
                 "id='" + id + '\'' +

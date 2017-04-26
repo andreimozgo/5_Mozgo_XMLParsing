@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class ValidatorSAXXSD {
+public class CandyValidator {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public static boolean validateXML(File xml, File xsd) {
