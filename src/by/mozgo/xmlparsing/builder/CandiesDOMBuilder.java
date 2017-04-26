@@ -23,7 +23,6 @@ public class CandiesDOMBuilder extends CandyBaseBuilder {
     private DocumentBuilder docBuilder;
 
     public CandiesDOMBuilder() {
-        //this.candies = new ArrayList<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
