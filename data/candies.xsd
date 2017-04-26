@@ -16,7 +16,13 @@
     </element>
     <complexType name="Candy">
         <sequence>
-            <element name="name" type="string"/>
+            <element name="name">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[A-Z][\w\s]+\w"/>
+                    </restriction>
+                </simpleType>
+            </element>
             <element name="energy">
                 <simpleType>
                     <restriction base="unsignedShort">
@@ -78,7 +84,7 @@
         <sequence>
             <element name="sugar">
                 <complexType>
-                    <attribute name="weight" type="unsignedShort" default="1000"/>
+                    <attribute name="weight" type="positiveInteger" default="1000" use="optional"/>
                 </complexType>
             </element>
         </sequence>
@@ -89,7 +95,7 @@
                 <sequence>
                     <element name="powdered_milk">
                         <complexType>
-                            <attribute name="weight" type="unsignedShort"/>
+                            <attribute name="weight" type="unsignedShort" use="required"/>
                         </complexType>
                     </element>
                     <element name="cocoa" type="unsignedShort"/>
@@ -103,7 +109,7 @@
                 <sequence>
                     <element name="condensed_milk">
                         <complexType>
-                            <attribute name="weight" type="unsignedShort"/>
+                            <attribute name="weight" type="unsignedShort" use="optional"/>
                         </complexType>
                     </element>
                     <element name="butter" type="unsignedShort"/>
