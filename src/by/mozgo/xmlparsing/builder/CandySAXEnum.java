@@ -4,29 +4,23 @@ package by.mozgo.xmlparsing.builder;
  * Created by Andrei Mozgo. 2017.
  */
 public enum CandySAXEnum {
-    CANDIES("candies"),
-    CANDY("candy"),
-    NAME("name"),
-    ENERGY("energy"),
-    TYPE("type"),
-    CHOCOLATE_INGREDIENTS("chocolate_ingredients"),
-    CARAMEL_INGREDIENTS("caramel_ingredients"),
-    CREAMY_INGREDIENTS("creamy_ingredients"),
-    SUGAR("sugar"),
-    COCOA("cocoa"),
-    NUT("nut"),
-    CONDENSED_MILK("condensed_milk"),
-    POWDERED_MILK("powdered_milk"),
-    BUTTER("butter"),
-    VALUE("value"),
-    PROTEIN("protein"),
-    FAT("fat"),
-    CARBOHYDRATE("carbohydrate"),
-    PRODUCTION("production");
-
-    private String value;
-
-    CandySAXEnum(String value) {
-        this.value = value;
-    }
+    CANDIES,
+    CANDY,
+    NAME,
+    ENERGY,
+    TYPE,
+    CHOCOLATE_INGREDIENTS,
+    CARAMEL_INGREDIENTS,
+    CREAMY_INGREDIENTS,
+    SUGAR,
+    COCOA,
+    NUT,
+    CONDENSED_MILK,
+    POWDERED_MILK,
+    BUTTER,
+    VALUE,
+    PROTEIN,
+    FAT,
+    CARBOHYDRATE,
+    PRODUCTION
 }

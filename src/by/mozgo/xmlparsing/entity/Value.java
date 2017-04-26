@@ -4,9 +4,9 @@ package by.mozgo.xmlparsing.entity;
  * Created by Andrei Mozgo. 2017.
  */
 public class Value {
-    double protein;
-    double fat;
-    double carbohydrate;
+    private double protein;
+    private double fat;
+    private double carbohydrate;
 
     public void setProtein(double protein) {
         this.protein = protein;

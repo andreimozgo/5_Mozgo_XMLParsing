@@ -21,6 +21,7 @@ public class ValidatorSAXXSD {
     private static final Logger LOGGER = LogManager.getLogger();
 
     public static boolean validateXML(File xml, File xsd) {
+        boolean isValid = true;
         String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
         SchemaFactory factory = SchemaFactory.newInstance(language);
         try {
@@ -30,11 +31,11 @@ public class ValidatorSAXXSD {
             validator.validate(source);
         } catch (SAXException e) {
             LOGGER.log(Level.ERROR, "{} is not valid because: {}", xml, e);
-
+            isValid = false;
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "I/O error: {}", e);
             throw new RuntimeException("I/O error: " + e, e);
         }
-        return true;
+        return isValid;
     }
 }
