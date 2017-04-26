@@ -24,6 +24,10 @@ public class Candy {
         this.energy = energy;
     }
 
+    public CandyType getType() {
+        return type;
+    }
+
     public void setType(CandyType type) {
         this.type = type;
     }

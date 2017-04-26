@@ -15,14 +15,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandiesDOMBuilder {
+public class CandiesDOMBuilder extends AbstractCandyBuilder {
     private final static Logger LOGGER = LogManager.getLogger();
-    private Set<Candy> candies;
     private DocumentBuilder docBuilder;
 
     public CandiesDOMBuilder() {
@@ -49,10 +47,7 @@ public class CandiesDOMBuilder {
         return true;
     }
 
-    public Set<Candy> getCandies() {
-        return candies;
-    }
-
+    @Override
     public void buildSetCandies(String fileName) {
         try {
             Document doc = docBuilder.parse(fileName);
@@ -60,17 +55,17 @@ public class CandiesDOMBuilder {
             NodeList candiesList = root.getElementsByTagName("candy");
             for (int i = 0; i < candiesList.getLength(); i++) {
                 Element candyElement = (Element) candiesList.item(i);
-                Candy candy = buildStudent(candyElement);
+                Candy candy = buildCandy(candyElement);
                 candies.add(candy);
             }
         } catch (IOException e) {
-            System.err.println("File error or I/O error: " + e);
+            LOGGER.log(Level.ERROR, "File error or I/O error: {}", e);
         } catch (SAXException e) {
-            System.err.println("Parsing failure: " + e);
+            LOGGER.log(Level.ERROR, "Parsing failure: {}", e);
         }
     }
 
-    private Candy buildStudent(Element candyElement) {
+    private Candy buildCandy(Element candyElement) {
         Candy candy = new Candy();
         candy.setId(candyElement.getAttribute("id"));
         candy.setName(getElementTextContent(candyElement, "name"));

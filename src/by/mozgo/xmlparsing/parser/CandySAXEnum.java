@@ -5,6 +5,7 @@ package by.mozgo.xmlparsing.parser;
  */
 public enum CandySAXEnum {
     CANDIES("candies"),
+    CANDY("candy"),
     NAME("name"),
     ENERGY("energy"),
     TYPE("type"),
@@ -27,9 +28,5 @@ public enum CandySAXEnum {
 
     CandySAXEnum(String value) {
         this.value = value;
-    }
-
-    public String getValue() {
-        return value;
     }
 }

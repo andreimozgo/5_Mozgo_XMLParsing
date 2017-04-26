@@ -12,7 +12,7 @@ public abstract class AbstractCandyBuilder {
     protected Set<Candy> candies;
 
     public AbstractCandyBuilder() {
-        candies = new HashSet<Candy>();
+        candies = new HashSet<>();
     }
 
     public AbstractCandyBuilder(Set<Candy> candies) {

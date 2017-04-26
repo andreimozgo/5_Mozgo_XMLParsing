@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class CandiesDOMBuilderTest {
     @Test
-    public void testSaxParser() {
+    public void testDOMParser() {
         CandiesDOMBuilder domBuilder = new CandiesDOMBuilder();
         domBuilder.buildSetCandies("data/candies.xml");
         System.out.println(domBuilder.getCandies());

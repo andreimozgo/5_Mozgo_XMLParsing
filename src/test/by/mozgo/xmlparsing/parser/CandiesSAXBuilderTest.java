@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class CandiesSAXBuilderTest {
     @Test
-    public void testSaxParser() {
+    public void testSAXParser() {
         CandiesSAXBuilder saxBuilder = new CandiesSAXBuilder();
         saxBuilder.buildSetCandies("data/candies.xml");
 

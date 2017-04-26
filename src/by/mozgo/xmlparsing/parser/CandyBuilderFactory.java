@@ -9,8 +9,8 @@ public class CandyBuilderFactory {
         switch (type) {
             case DOM:
                 return new CandiesSAXBuilder();
- /*            case STAX:
-                return new CandiesStAXBuilder();*/
+            case STAX:
+                return new CandiesStAXBuilder();
             case SAX:
                 return new CandiesSAXBuilder();
             default:
