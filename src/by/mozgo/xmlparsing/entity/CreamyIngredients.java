@@ -4,11 +4,11 @@ package by.mozgo.xmlparsing.entity;
  * Created by Andrei Mozgo. 2017.
  */
 public class CreamyIngredients extends AbstractIngredients {
-    private int condensed_milk;
+    private int condensedMilk;
     private int butter;
 
-    public void setCondensed_milk(int condensed_milk) {
-        this.condensed_milk = condensed_milk;
+    public void setCondensedMilk(int condensedMilk) {
+        this.condensedMilk = condensedMilk;
     }
 
     public void setButter(int butter) {
@@ -17,7 +17,7 @@ public class CreamyIngredients extends AbstractIngredients {
 
     @Override
     public String toString() {
-        return super.toString() + " condensed_milk=" + condensed_milk +
+        return super.toString() + " condensedMilk=" + condensedMilk +
                 ", butter=" + butter;
     }
 }

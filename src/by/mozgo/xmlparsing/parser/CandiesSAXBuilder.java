@@ -14,18 +14,18 @@ import java.util.Set;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandySAXBuilder extends AbstractCandyBuilder {
+public class CandiesSAXBuilder extends AbstractCandyBuilder {
     private final static Logger LOGGER = LogManager.getLogger();
-    private CandyHandler candyHandler;
+    private CandySAXHandler handler;
     private XMLReader reader;
 
-    public CandySAXBuilder() {
-        candyHandler = new CandyHandler();
+    public CandiesSAXBuilder() {
+        handler = new CandySAXHandler();
         try {
             reader = XMLReaderFactory.createXMLReader();
-            reader.setContentHandler(candyHandler);
+            reader.setContentHandler(handler);
         } catch (SAXException e) {
-            System.err.print("ошибка SAX парсера: " + e);
+            LOGGER.log(Level.ERROR, "SAX parser error: {}", e);
         }
     }
 
@@ -38,11 +38,11 @@ public class CandySAXBuilder extends AbstractCandyBuilder {
         try {
             reader.parse(fileName);
         } catch (SAXException e) {
-            LOGGER.log(Level.ERROR, "Sax parser eror: {}", e);
+            LOGGER.log(Level.ERROR, "SAX parser error: {}", e);
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "I/O error: {}", e);
             throw new RuntimeException("I/O error: " + e, e);
         }
-        candies = candyHandler.getCandies();
+        candies = handler.getCandies();
     }
 }

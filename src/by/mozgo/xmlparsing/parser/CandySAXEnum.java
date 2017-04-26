@@ -3,7 +3,7 @@ package by.mozgo.xmlparsing.parser;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public enum CandyEnum {
+public enum CandySAXEnum {
     CANDIES("candies"),
     NAME("name"),
     ENERGY("energy"),
@@ -25,7 +25,7 @@ public enum CandyEnum {
 
     private String value;
 
-    CandyEnum(String value) {
+    CandySAXEnum(String value) {
         this.value = value;
     }
 

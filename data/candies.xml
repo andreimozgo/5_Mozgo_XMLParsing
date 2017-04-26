@@ -6,7 +6,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="1900"/>
-            <powdered_milk weight="850"/>
+            <powderedMilk weight="850"/>
             <cocoa>10</cocoa>
         </chocolate_ingredients>
         <value>
@@ -22,7 +22,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="2000"/>
-            <powdered_milk weight="1100"/>
+            <powderedMilk weight="1100"/>
             <cocoa>13</cocoa>
         </chocolate_ingredients>
         <value>
@@ -38,7 +38,7 @@
         <type>creamy</type>
         <creamy_ingredients>
             <sugar weight="3500"/>
-            <condensed_milk weight="4900"/>
+            <condensedMilk weight="4900"/>
             <butter>8</butter>
         </creamy_ingredients>
         <value>
@@ -86,7 +86,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="2500"/>
-            <powdered_milk weight="2500"/>
+            <powderedMilk weight="2500"/>
             <cocoa>20</cocoa>
         </chocolate_ingredients>
         <value>
@@ -102,7 +102,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="2467"/>
-            <powdered_milk weight="2134"/>
+            <powderedMilk weight="2134"/>
             <cocoa>19</cocoa>
         </chocolate_ingredients>
         <value>
@@ -118,7 +118,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="1000"/>
-            <powdered_milk weight="2934"/>
+            <powderedMilk weight="2934"/>
             <cocoa>19</cocoa>
         </chocolate_ingredients>
         <value>
@@ -134,7 +134,7 @@
         <type>creamy</type>
         <creamy_ingredients>
             <sugar weight="4500"/>
-            <condensed_milk weight="2970"/>
+            <condensedMilk weight="2970"/>
             <butter>5</butter>
         </creamy_ingredients>
         <value>
@@ -150,7 +150,7 @@
         <type>creamy</type>
         <creamy_ingredients>
             <sugar weight="4500"/>
-            <condensed_milk weight="2970"/>
+            <condensedMilk weight="2970"/>
             <butter>5</butter>
         </creamy_ingredients>
         <value>
@@ -166,7 +166,7 @@
         <type>creamy</type>
         <creamy_ingredients>
             <sugar weight="3400"/>
-            <condensed_milk weight="1970"/>
+            <condensedMilk weight="1970"/>
             <butter>18</butter>
         </creamy_ingredients>
         <value>
@@ -198,7 +198,7 @@
         <type>creamy</type>
         <creamy_ingredients>
             <sugar weight="4500"/>
-            <condensed_milk weight="2970"/>
+            <condensedMilk weight="2970"/>
             <butter>5</butter>
         </creamy_ingredients>
         <value>
@@ -214,7 +214,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="1000"/>
-            <powdered_milk weight="458"/>
+            <powderedMilk weight="458"/>
             <cocoa>30</cocoa>
         </chocolate_ingredients>
         <value>
@@ -230,7 +230,7 @@
         <type>chocolate</type>
         <chocolate_ingredients>
             <sugar weight="1700"/>
-            <powdered_milk weight="418"/>
+            <powderedMilk weight="418"/>
             <cocoa>28</cocoa>
         </chocolate_ingredients>
         <value>

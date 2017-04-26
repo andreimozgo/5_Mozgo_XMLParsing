@@ -93,7 +93,7 @@
         <complexContent>
             <extension base="tns:Ingredients">
                 <sequence>
-                    <element name="powdered_milk">
+                    <element name="powderedMilk">
                         <complexType>
                             <attribute name="weight" type="unsignedShort" use="required"/>
                         </complexType>
@@ -107,7 +107,7 @@
         <complexContent>
             <extension base="tns:Ingredients">
                 <sequence>
-                    <element name="condensed_milk">
+                    <element name="condensedMilk">
                         <complexType>
                             <attribute name="weight" type="unsignedShort" use="optional"/>
                         </complexType>

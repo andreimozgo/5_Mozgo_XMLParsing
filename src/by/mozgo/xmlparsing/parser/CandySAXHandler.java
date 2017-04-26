@@ -11,11 +11,11 @@ import java.util.Set;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandyHandler extends DefaultHandler {
+public class CandySAXHandler extends DefaultHandler {
     private Set<Candy> candies;
     private Candy current = null;
-    private CandyEnum currentEnum = null;
-    private EnumSet<CandyEnum> withText;
+    private CandySAXEnum currentEnum = null;
+    private EnumSet<CandySAXEnum> withText;
     private AbstractIngredients ingredients;
     private CaramelIngredients caramelIngredients;
     private ChocolateIngredients chocolateIngredients;
@@ -23,9 +23,9 @@ public class CandyHandler extends DefaultHandler {
     private Attributes attrs;
     private Value value;
 
-    public CandyHandler() {
+    public CandySAXHandler() {
         candies = new HashSet<>();
-        withText = EnumSet.range(CandyEnum.NAME, CandyEnum.PRODUCTION);
+        withText = EnumSet.range(CandySAXEnum.NAME, CandySAXEnum.PRODUCTION);
     }
 
     public Set<Candy> getCandies() {
@@ -39,7 +39,7 @@ public class CandyHandler extends DefaultHandler {
             current.setId(attrs.getValue(0));
         } else {
             this.attrs = attrs;
-            CandyEnum temp = CandyEnum.valueOf(localName.toUpperCase());
+            CandySAXEnum temp = CandySAXEnum.valueOf(localName.toUpperCase());
             if (withText.contains(temp)) {
                 currentEnum = temp;
             }
@@ -96,10 +96,10 @@ public class CandyHandler extends DefaultHandler {
                     caramelIngredients.setNut(Integer.parseInt(s));
                     break;
                 case CONDENSED_MILK:
-                    creamyIngredients.setCondensed_milk(Integer.parseInt(attrs.getValue(0)));
+                    creamyIngredients.setCondensedMilk(Integer.parseInt(attrs.getValue(0)));
                     break;
                 case POWDERED_MILK:
-                    chocolateIngredients.setPowdered_milk(Integer.parseInt(attrs.getValue(0)));
+                    chocolateIngredients.setPowderedMilk(Integer.parseInt(attrs.getValue(0)));
                     break;
                 case BUTTER:
                     creamyIngredients.setButter(Integer.parseInt(s));
