@@ -1,4 +1,4 @@
-package by.mozgo.xmlparsing.parsers;
+package by.mozgo.xmlparsing.parser;
 
 import by.mozgo.xmlparsing.entity.Candy;
 

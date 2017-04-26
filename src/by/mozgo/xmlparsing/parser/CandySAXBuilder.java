@@ -1,4 +1,4 @@
-package by.mozgo.xmlparsing.parsers;
+package by.mozgo.xmlparsing.parser;
 
 import by.mozgo.xmlparsing.entity.Candy;
 import org.apache.logging.log4j.Level;
@@ -16,7 +16,6 @@ import java.util.Set;
  */
 public class CandySAXBuilder extends AbstractCandyBuilder {
     private final static Logger LOGGER = LogManager.getLogger();
-    private Set<Candy> students;
     private CandyHandler candyHandler;
     private XMLReader reader;
 
@@ -44,6 +43,6 @@ public class CandySAXBuilder extends AbstractCandyBuilder {
             LOGGER.log(Level.FATAL, "I/O error: {}", e);
             throw new RuntimeException("I/O error: " + e, e);
         }
-        students = candyHandler.getCandies();
+        candies = candyHandler.getCandies();
     }
 }

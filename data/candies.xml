@@ -117,7 +117,7 @@
         <energy>533</energy>
         <type>chocolate</type>
         <chocolate_ingredients>
-            <sugar/>
+            <sugar weight="1000"/>
             <powdered_milk weight="2934"/>
             <cocoa>19</cocoa>
         </chocolate_ingredients>
@@ -213,7 +213,7 @@
         <energy>533</energy>
         <type>chocolate</type>
         <chocolate_ingredients>
-            <sugar/>
+            <sugar weight="1000"/>
             <powdered_milk weight="458"/>
             <cocoa>30</cocoa>
         </chocolate_ingredients>
@@ -229,7 +229,7 @@
         <energy>570</energy>
         <type>chocolate</type>
         <chocolate_ingredients>
-            <sugar/>
+            <sugar weight="1700"/>
             <powdered_milk weight="418"/>
             <cocoa>28</cocoa>
         </chocolate_ingredients>
