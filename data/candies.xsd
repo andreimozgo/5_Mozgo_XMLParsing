@@ -14,11 +14,16 @@
             </sequence>
         </complexType>
     </element>
-
     <complexType name="Candy">
         <sequence>
             <element name="name" type="string"/>
-            <element name="energy" type="unsignedShort"/>
+            <element name="energy">
+                <simpleType>
+                    <restriction base="unsignedShort">
+                        <pattern value="\d{1,3}"/>
+                    </restriction>
+                </simpleType>
+            </element>
             <element name="type">
                 <simpleType>
                     <restriction base="string">
@@ -32,27 +37,52 @@
             <element name="value">
                 <complexType>
                     <sequence>
-                        <element name="protein" type="double"/>
-                        <element name="fat" type="double"/>
-                        <element name="carbohydrate" type="double"/>
+                        <element name="protein">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="fat">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="carbohydrate">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
                     </sequence>
                 </complexType>
             </element>
-            <element name="production"/>
+            <element name="production">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[A-Z][\w\s]+\w"/>
+                    </restriction>
+                </simpleType>
+            </element>
         </sequence>
         <attribute name="id" type="ID"/>
     </complexType>
-
     <complexType name="Sweet">
         <sequence>
             <element name="sugar">
                 <complexType>
-                    <attribute name="weight" type="unsignedShort"/>
+                    <attribute name="weight" type="unsignedShort" default="1000"/>
                 </complexType>
             </element>
         </sequence>
     </complexType>
-
     <complexType name="Chocolate">
         <complexContent>
             <extension base="tns:Sweet">
@@ -67,7 +97,6 @@
             </extension>
         </complexContent>
     </complexType>
-
     <complexType name="Creamy">
         <complexContent>
             <extension base="tns:Sweet">
@@ -82,7 +111,6 @@
             </extension>
         </complexContent>
     </complexType>
-
     <complexType name="Caramel">
         <complexContent>
             <extension base="tns:Sweet">
@@ -93,7 +121,6 @@
             </extension>
         </complexContent>
     </complexType>
-
     <element name="sweet" type="tns:Sweet" abstract="true"></element>
     <element name="chocolate_ingredients" type="tns:Chocolate" substitutionGroup="tns:sweet"></element>
     <element name="creamy_ingredients" type="tns:Creamy" substitutionGroup="tns:sweet"></element>
