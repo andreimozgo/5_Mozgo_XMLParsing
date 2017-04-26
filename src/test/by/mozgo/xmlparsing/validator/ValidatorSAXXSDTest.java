@@ -16,7 +16,6 @@ public class ValidatorSAXXSDTest {
     public void testValidate() throws IOException, SAXException {
         File xml = new File("data/candies.xml");
         File xsd = new File("data/candies.xsd");
-
         Assert.assertTrue(ValidatorSAXXSD.validateXML(xml, xsd));
     }
 }

@@ -19,7 +19,7 @@ import java.util.HashSet;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandiesDOMBuilder extends AbstractCandyBuilder {
+public class CandiesDOMBuilder extends CandyBaseBuilder {
     private final static Logger LOGGER = LogManager.getLogger();
     private DocumentBuilder docBuilder;
 

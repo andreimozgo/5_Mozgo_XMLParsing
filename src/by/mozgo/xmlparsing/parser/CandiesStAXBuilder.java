@@ -17,11 +17,10 @@ import java.io.IOException;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandiesStAXBuilder extends AbstractCandyBuilder {
+public class CandiesStAXBuilder extends CandyBaseBuilder {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final int INITIAL_VALUE = 0;
     private XMLInputFactory inputFactory;
-    private CandyType candyType;
 
     public CandiesStAXBuilder() {
         inputFactory = XMLInputFactory.newInstance();
@@ -70,7 +69,6 @@ public class CandiesStAXBuilder extends AbstractCandyBuilder {
                         case TYPE:
                             name = getXMLText(reader);
                             candy.setType(CandyType.valueOf(name.toUpperCase()));
-                            candyType = CandyType.valueOf(name.toUpperCase());
                             break;
                         case CHOCOLATE_INGREDIENTS:
                             candy.setIngredients(getCandyIngredients(reader));
@@ -101,7 +99,7 @@ public class CandiesStAXBuilder extends AbstractCandyBuilder {
     }
 
     private AbstractIngredients getCandyIngredients(XMLStreamReader reader) throws XMLStreamException {
-        AbstractIngredients ingredients = null;
+        AbstractIngredients ingredients;
         int sugar = INITIAL_VALUE;
         int butter = INITIAL_VALUE;
         int nut = INITIAL_VALUE;

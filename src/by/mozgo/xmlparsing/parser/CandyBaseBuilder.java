@@ -8,15 +8,11 @@ import java.util.Set;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public abstract class AbstractCandyBuilder {
+public abstract class CandyBaseBuilder {
     protected Set<Candy> candies;
 
-    public AbstractCandyBuilder() {
+    public CandyBaseBuilder() {
         candies = new HashSet<>();
-    }
-
-    public AbstractCandyBuilder(Set<Candy> candies) {
-        this.candies = candies;
     }
 
     public Set<Candy> getCandies() {

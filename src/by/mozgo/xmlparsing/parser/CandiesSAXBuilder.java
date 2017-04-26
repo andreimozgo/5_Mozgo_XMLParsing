@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by Andrei Mozgo. 2017.
  */
-public class CandiesSAXBuilder extends AbstractCandyBuilder {
+public class CandiesSAXBuilder extends CandyBaseBuilder {
     private final static Logger LOGGER = LogManager.getLogger();
     private CandySAXHandler handler;
     private XMLReader reader;
