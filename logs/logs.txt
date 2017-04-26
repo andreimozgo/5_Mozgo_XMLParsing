@@ -1,0 +1,1 @@
+2017-04-27 02:29:49 [INFO ] (CandyValidator.java:32) - data\candies.xml is valid.

@@ -29,6 +29,7 @@ public class CandyValidator {
             Validator validator = schema.newValidator();
             Source source = new StreamSource(xml);
             validator.validate(source);
+            LOGGER.log(Level.INFO, "{} is valid.", xml);
         } catch (SAXException e) {
             LOGGER.log(Level.ERROR, "{} is not valid because: {}", xml, e);
             isValid = false;
