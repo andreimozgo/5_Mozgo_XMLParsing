@@ -39,7 +39,7 @@
                     </restriction>
                 </simpleType>
             </element>
-            <element ref="tns:sweet"/>
+            <element ref="tns:ingredients"/>
             <element name="value">
                 <complexType>
                     <sequence>
@@ -80,7 +80,7 @@
         </sequence>
         <attribute name="id" type="ID"/>
     </complexType>
-    <complexType name="Sweet">
+    <complexType name="Ingredients">
         <sequence>
             <element name="sugar">
                 <complexType>
@@ -91,7 +91,7 @@
     </complexType>
     <complexType name="Chocolate">
         <complexContent>
-            <extension base="tns:Sweet">
+            <extension base="tns:Ingredients">
                 <sequence>
                     <element name="powdered_milk">
                         <complexType>
@@ -105,7 +105,7 @@
     </complexType>
     <complexType name="Creamy">
         <complexContent>
-            <extension base="tns:Sweet">
+            <extension base="tns:Ingredients">
                 <sequence>
                     <element name="condensed_milk">
                         <complexType>
@@ -119,7 +119,7 @@
     </complexType>
     <complexType name="Caramel">
         <complexContent>
-            <extension base="tns:Sweet">
+            <extension base="tns:Ingredients">
                 <sequence>
                     <element name="cocoa" type="unsignedShort"/>
                     <element name="nut" type="unsignedShort"/>
@@ -127,8 +127,8 @@
             </extension>
         </complexContent>
     </complexType>
-    <element name="sweet" type="tns:Sweet" abstract="true"></element>
-    <element name="chocolate_ingredients" type="tns:Chocolate" substitutionGroup="tns:sweet"></element>
-    <element name="creamy_ingredients" type="tns:Creamy" substitutionGroup="tns:sweet"></element>
-    <element name="caramel_ingredients" type="tns:Caramel" substitutionGroup="tns:sweet"></element>
+    <element name="ingredients" type="tns:Ingredients" abstract="true"></element>
+    <element name="chocolate_ingredients" type="tns:Chocolate" substitutionGroup="tns:ingredients"></element>
+    <element name="creamy_ingredients" type="tns:Creamy" substitutionGroup="tns:ingredients"></element>
+    <element name="caramel_ingredients" type="tns:Caramel" substitutionGroup="tns:ingredients"></element>
 </schema>
