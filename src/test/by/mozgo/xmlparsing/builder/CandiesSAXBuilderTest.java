@@ -1,8 +1,8 @@
-package test.by.mozgo.xmlparsing.parser;
+package test.by.mozgo.xmlparsing.builder;
 
+import by.mozgo.xmlparsing.builder.CandiesSAXBuilder;
+import by.mozgo.xmlparsing.builder.Director;
 import by.mozgo.xmlparsing.entity.Candy;
-import by.mozgo.xmlparsing.parser.CandiesSAXBuilder;
-import by.mozgo.xmlparsing.parser.Director;
 import org.junit.Assert;
 import org.junit.Test;
 

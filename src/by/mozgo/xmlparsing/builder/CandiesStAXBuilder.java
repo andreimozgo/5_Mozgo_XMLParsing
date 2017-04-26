@@ -1,4 +1,4 @@
-package by.mozgo.xmlparsing.parser;
+package by.mozgo.xmlparsing.builder;
 
 import by.mozgo.xmlparsing.entity.*;
 import org.apache.logging.log4j.Level;

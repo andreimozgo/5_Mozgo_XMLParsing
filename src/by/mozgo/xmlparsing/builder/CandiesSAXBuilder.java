@@ -1,4 +1,4 @@
-package by.mozgo.xmlparsing.parser;
+package by.mozgo.xmlparsing.builder;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -23,7 +23,7 @@ public class CandiesSAXBuilder extends CandyBaseBuilder {
             reader = XMLReaderFactory.createXMLReader();
             reader.setContentHandler(handler);
         } catch (SAXException e) {
-            LOGGER.log(Level.ERROR, "SAX parser error: {}", e);
+            LOGGER.log(Level.ERROR, "SAX builder error: {}", e);
         }
     }
 
@@ -32,7 +32,7 @@ public class CandiesSAXBuilder extends CandyBaseBuilder {
         try {
             reader.parse(fileName);
         } catch (SAXException e) {
-            LOGGER.log(Level.ERROR, "SAX parser error: {}", e);
+            LOGGER.log(Level.ERROR, "SAX builder error: {}", e);
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "I/O error: {}", e);
             throw new RuntimeException("I/O error: " + e, e);

@@ -1,4 +1,4 @@
-package by.mozgo.xmlparsing.parser;
+package by.mozgo.xmlparsing.builder;
 
 /**
  * Created by Andrei Mozgo. 2017.

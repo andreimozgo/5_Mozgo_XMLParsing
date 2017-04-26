@@ -6,9 +6,9 @@ package test.by.mozgo.xmlparsing.suite;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import test.by.mozgo.xmlparsing.parser.CandiesDOMBuilderTest;
-import test.by.mozgo.xmlparsing.parser.CandiesSAXBuilderTest;
-import test.by.mozgo.xmlparsing.parser.CandiesStAXBuilderTest;
+import test.by.mozgo.xmlparsing.builder.CandiesDOMBuilderTest;
+import test.by.mozgo.xmlparsing.builder.CandiesSAXBuilderTest;
+import test.by.mozgo.xmlparsing.builder.CandiesStAXBuilderTest;
 import test.by.mozgo.xmlparsing.validator.ValidatorSAXXSDTest;
 
 @RunWith(Suite.class)
